@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="difficulty-container" id="difficulty-container">
+        <h1>Select Difficulty</h1>
+        <select id="difficulty">
+            <option value="4">Easy</option>
+            <option value="5">Medium</option>
+            <option value="6">Hard</option>
+        </select>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    
+    <div class="game-container" id="game-container" style="display: none;">
+        <div class="info-board">
+            <div id="timer">Time: 0</div>
+            <div id="attempts">Attempts: 0</div>
+            <div id="score">Score: 0</div>
+            <button onclick="restartGame()">Restart</button>
+        </div>
+        <div class="board" id="board"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

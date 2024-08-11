@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('images/background.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Adjust the size of the image to cover the whole screen */
+    background-position: center center; /* Center the image */
+    color: #ffffff;
+    image-rendering: -webkit-optimize-contrast; /* For WebKit browsers like Chrome and Safari */
+    image-rendering: -moz-crisp-edges; /* For Firefox */
+    image-rendering: -o-crisp-edges; /* For Opera */
+    image-rendering: crisp-edges; /* Standard property */
+}
+
+.difficulty-container, .game-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better visibility */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+
+.info-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    color: #ffffff;
+    align-items: center;
+}
+
+.info-board div {
+    margin: 0 10px;
+}
+
+.board {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #1E90FF; /* Fallback color in case image fails to load */
+    border: 1px solid #cccccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s, background-image 0.3s;
+    background-size: cover; /* Ensure the image covers the card */
+    background-position: center; /* Center the image */
+    background-image: url('images/card-back.jpg'); /* Image for the backside */
+}
+
+.card.flipped {
+    background-image: url('images/card-front.jpg'); /* Image for the front when flipped */
+    background-color: #FFD700; /* Optional: color when flipped */
+}
+
+.card.matched {
+    background-image: url('images/card-front.jpg'); /* Image for the front when matched */
+    background-color: #32CD32; /* Matched card color */
+}
+
+button {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+button:hover {
+    background-color: #00cc99;
+    color: #ffffff;
+    border: 1px solid #00cc99; /* Border color on hover */
+}
